@@ -24,16 +24,15 @@ describe('app routes', () => {
       .post('/api/v1/studios')
       .send({
         name: 'ABC Studios',
-        address: [
+        address:
           { city: 'Nowheretown', state: 'WY', country: 'United States' }
-        ]
       })
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           __v: 0,
           name: 'ABC Studios',
-          address: [{ _id: expect.any(String), city: 'Nowheretown', state: 'WY', country: 'United States' }],
+          address: { city: 'Nowheretown', state: 'WY', country: 'United States' },
           id: expect.any(String)
         });
       });
@@ -63,10 +62,8 @@ describe('app routes', () => {
           _id: abcStudios._id.toString(),
           __v: 0,
           name: abcStudios.name,
-          address: [],
           id: expect.any(String)
         });
       });
   });
-
 });
