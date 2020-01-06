@@ -33,7 +33,8 @@ describe('app routes', () => {
           _id: expect.any(String),
           __v: 0,
           name: 'ABC Studios',
-          address: [{ _id: expect.any(String), city: 'Nowheretown', state: 'WY', country: 'United States' }]
+          address: [{ _id: expect.any(String), city: 'Nowheretown', state: 'WY', country: 'United States' }],
+          id: expect.any(String)
         });
       });
   });
@@ -46,9 +47,8 @@ describe('app routes', () => {
         studios.forEach(studio => {
           expect(res.body).toContainEqual({
             _id: studio._id.toString(),
-            __v: 0,
             name: studio.name,
-            address: []
+            id: expect.any(String)
           });
         });
       });
@@ -63,7 +63,8 @@ describe('app routes', () => {
           _id: abcStudios._id.toString(),
           __v: 0,
           name: abcStudios.name,
-          address: []
+          address: [],
+          id: expect.any(String)
         });
       });
   });

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1578346706073" clover="3.2.0">
-  <project timestamp="1578346706073" name="All files">
-    <metrics statements="44" coveredstatements="34" conditionals="7" coveredconditionals="1" methods="12" coveredmethods="9" elements="63" coveredelements="44" complexity="0" loc="44" ncloc="44" packages="5" files="6" classes="6"/>
+<coverage generated="1578349798571" clover="3.2.0">
+  <project timestamp="1578349798571" name="All files">
+    <metrics statements="48" coveredstatements="38" conditionals="7" coveredconditionals="1" methods="12" coveredmethods="9" elements="67" coveredelements="48" complexity="0" loc="48" ncloc="48" packages="5" files="7" classes="7"/>
     <package name="lib">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/home/alchemy/career/overripe-bananas/lib/app.js">
@@ -37,13 +37,20 @@
       </file>
     </package>
     <package name="lib.models">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Actor.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Actor.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
       <file name="Studio.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Studio.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
       </file>
     </package>
     <package name="lib.routes">
@@ -56,9 +63,9 @@
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.utils">
