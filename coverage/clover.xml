@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1578361917975" clover="3.2.0">
-  <project timestamp="1578361917975" name="All files">
-    <metrics statements="72" coveredstatements="60" conditionals="7" coveredconditionals="1" methods="24" coveredmethods="19" elements="103" coveredelements="80" complexity="0" loc="72" ncloc="72" packages="5" files="10" classes="10"/>
+<coverage generated="1578417799916" clover="3.2.0">
+  <project timestamp="1578417799916" name="All files">
+    <metrics statements="76" coveredstatements="64" conditionals="7" coveredconditionals="1" methods="24" coveredmethods="19" elements="107" coveredelements="84" complexity="0" loc="76" ncloc="76" packages="5" files="11" classes="11"/>
     <package name="lib">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/home/alchemy/career/overripe-bananas/lib/app.js">
@@ -39,13 +39,13 @@
       </file>
     </package>
     <package name="lib.models">
-      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Actor.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Actor.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
       <file name="Film.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Film.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -53,6 +53,13 @@
         <line num="3" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
         <line num="33" count="4" type="stmt"/>
+      </file>
+      <file name="Reviewer.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Reviewer.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
       <file name="Studio.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Studio.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
