@@ -49,4 +49,19 @@ describe('app routes', () => {
         });
       });
   });
+
+  it('gets an actor by id', async() => {
+    const actor = await Actor.create({ name: 'Lady1' });
+    return request(app)
+      .get(`/api/v1/actors/${actor._id}`)
+      .then(res => {
+        expect(res.body).toEqual({
+          _id: actor._id.toString(),
+          name: actor.name,
+          id: expect.any(String),
+          films: [],
+          __v: 0
+        });
+      });
+  });
 });
