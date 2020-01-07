@@ -17,14 +17,25 @@ describe('app routes', () => {
     return mongoose.connection.dropDatabase();
   });
 
+  let myActor;
+  let myStudio;
+  let myFilm;
+
+  beforeEach(async() => {
+    myActor = await Actor.create({ name: 'Lady' });
+    myStudio = await Studio.create({ name: 'ABC Studios' });
+    myFilm = await Film.create({ 
+      title: 'Badass Lady',
+      studio: myStudio._id,
+      released: 1999,
+      cast: [{ role: 'All Around Badass', actor: myActor._id }] });
+  });
+
   afterAll(() => {
     return mongoose.connection.close();
   });
 
   it('creates an film', async() => {
-    const myActor = await Actor.create({ name: 'Lady' });
-    console.log(myActor);
-    const myStudio = await Studio.create({ name: 'ABC Studios' });
     return request(app)
       .post('/api/v1/films')
       .send({
@@ -42,8 +53,37 @@ describe('app routes', () => {
           released: 1999,
           title: 'Badass Lady',
           studio: myStudio._id.toString()
-
         });
       });
   });
+
+  it('gets all films', async() => {
+    return request(app)
+      .get('/api/v1/films')
+      .then(res => {
+        expect(res.body).toEqual([{
+          _id: expect.any(String),
+          id: expect.any(String),
+          __v: 0,
+          released: 1999,
+          title: 'Badass Lady',
+          studio: { name: myStudio.name, _id: myStudio._id.toString(), id: myStudio.id }
+        }]);
+      });
+  });
+/*
+  it('gets a film by id', async() => {
+    return request(app)
+      .get('/api/v1/films')
+      .then(res => {
+        expect(res.body).toEqual([{
+          _id: expect.any(String),
+          id: expect.any(String),
+          __v: 0,
+          released: 1999,
+          title: 'Badass Lady',
+          studio: { name: myStudio.name, _id: myStudio._id.toString(), id: myStudio.id }
+        }]);
+      });
+  }); */
 });

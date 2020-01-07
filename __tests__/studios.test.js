@@ -5,6 +5,7 @@ const app = require('../lib/app');
 const connect = require('../lib/utils/connect');
 const mongoose = require('mongoose');
 const Studio = require('../lib/models/Studio');
+const Film = require('../lib/models/Film');
 
 describe('app routes', () => {
   beforeAll(() => {
@@ -54,15 +55,17 @@ describe('app routes', () => {
   });
 
   it('gets a studio by id', async() => {
-    const abcStudios = await Studio.create({ name: 'ABC Studios' });
+    const myStudio = await Studio.create({ name: 'ABC Studios', address: { city: 'Nowhere' } });
     return request(app)
-      .get(`/api/v1/studios/${abcStudios.id}`)
+      .get(`/api/v1/studios/${myStudio.id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: abcStudios._id.toString(),
+          _id: myStudio._id.toString(),
           __v: 0,
-          name: abcStudios.name,
-          id: expect.any(String)
+          name: myStudio.name,
+          id: expect.any(String),
+          address: { city: 'Nowhere' },
+          films: []
         });
       });
   });
