@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1578419374383" clover="3.2.0">
-  <project timestamp="1578419374384" name="All files">
-    <metrics statements="88" coveredstatements="76" conditionals="7" coveredconditionals="1" methods="32" coveredmethods="27" elements="127" coveredelements="104" complexity="0" loc="88" ncloc="88" packages="5" files="12" classes="12"/>
+<coverage generated="1578420962506" clover="3.2.0">
+  <project timestamp="1578420962506" name="All files">
+    <metrics statements="91" coveredstatements="79" conditionals="7" coveredconditionals="1" methods="32" coveredmethods="27" elements="130" coveredelements="107" complexity="0" loc="91" ncloc="91" packages="5" files="13" classes="13"/>
     <package name="lib">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/home/alchemy/career/overripe-bananas/lib/app.js">
@@ -40,7 +40,7 @@
       </file>
     </package>
     <package name="lib.models">
-      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Actor.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Actor.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="5" type="stmt"/>
@@ -54,6 +54,12 @@
         <line num="3" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
         <line num="33" count="5" type="stmt"/>
+      </file>
+      <file name="Review.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Review.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
       <file name="Reviewer.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Reviewer.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
