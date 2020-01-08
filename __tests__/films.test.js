@@ -1,20 +1,13 @@
-require('dotenv').config();
+const { getFilm, getFilms, getStudio, getActor } = require('../lib/helpers/data-helpers');
 
 const request = require('supertest');
 const app = require('../lib/app');
-const connect = require('../lib/utils/connect');
-const mongoose = require('mongoose');
-const Film = require('../lib/models/Film');
-const Actor = require('../lib/models/Actor');
-const Studio = require('../lib/models/Studio');
-const Review = require('../lib/models/Review');
-const Reviewer = require('../lib/models/Reviewer');
 
 describe('app routes', () => {
-// before all, before each...
-// refactor variable names
 
-  it('creates a film', async() => {
+  it('creates a film', async() => {  
+    const myActor = await getActor();
+    const myStudio = await getStudio();
     return request(app)
       .post('/api/v1/films')
       .send({
@@ -37,41 +30,23 @@ describe('app routes', () => {
   });
 
   it('gets all films', async() => {
+    const films = await getFilms();
     return request(app)
       .get('/api/v1/films')
       .then(res => {
-        expect(res.body).toEqual([{
-          _id: expect.any(String),
-          id: expect.any(String),
-          __v: 0,
-          released: 1999,
-          title: 'Badass Lady',
-          studio: { name: myStudio.name, _id: myStudio._id.toString(), id: myStudio.id }
-        }]);
+        films.forEach(film => {
+          delete film.cast;
+          expect(res.body).toContainEqual({ ...film, studio: expect.any(Object) });
+        });
       });
   });
 
   it('gets a film by id', async() => {
+    const film = await getFilm();
     return request(app)
-      .get(`/api/v1/films/${myFilm._id}`)
+      .get(`/api/v1/films/${film._id}`)
       .then(res => {
-        expect(res.body).toEqual({
-          _id: myFilm._id.toString(),
-          id: expect.any(String),
-          __v: 0,
-          released: myFilm.released,
-          reviews: [{ 
-            __v: 0,
-            rating: myReview.rating,
-            review: myReview.review,
-            film: myFilm._id.toString(),
-            _id: myReview._id.toString(),
-            reviewer: myReviewer._id.toString()
-          }],
-          title: myFilm.title,
-          cast: [{ role: 'All Around Badass', actor: myActor._id.toString(), _id: expect.any(String) }],
-          studio: { name: myStudio.name, _id: myStudio._id.toString(), id: myStudio.id }
-        });
+        expect(res.body).toEqual({ ...film, reviews: expect.any(Object), studio: expect.any(Object) });
       });
   });
 });
