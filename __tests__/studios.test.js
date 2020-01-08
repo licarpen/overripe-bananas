@@ -3,7 +3,7 @@ const { getStudio, getStudios } = require('../lib/helpers/data-helpers');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('app routes', () => {
+describe('studio routes', () => {
 
   it('creates a studio', () => {
     return request(app)
@@ -30,6 +30,8 @@ describe('app routes', () => {
       .get('/api/v1/studios')
       .then(res => {
         studios.forEach(studio => {
+          delete studio.__v;
+          delete studio.address;
           expect(res.body).toContainEqual(
             studio
           );
@@ -37,18 +39,12 @@ describe('app routes', () => {
       });
   });
 
-  // myStudio._id is ObjectID
-  // myStudio.id is a virtual that is a string
-  // toJSON( { vitruals: true }) includes .id in response and myStudio.id can be used in route 
-  // use myStuio._id.toString() to convert to string
-
-
   it('gets a studio by id', async() => {
     const studio = await getStudio();
     return request(app)
       .get(`/api/v1/studios/${studio._id}`)
       .then(res => {
-        expect(res.body).toEqual(studio);
+        expect(res.body).toEqual({ ...studio, films: expect.any(Object) });
       });
   });
 });

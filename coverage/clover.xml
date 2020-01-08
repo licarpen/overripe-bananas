@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1578520803732" clover="3.2.0">
-  <project timestamp="1578520803732" name="All files">
+<coverage generated="1578524072706" clover="3.2.0">
+  <project timestamp="1578524072707" name="All files">
     <metrics statements="149" coveredstatements="144" conditionals="15" coveredconditionals="13" methods="59" coveredmethods="57" elements="223" coveredelements="214" complexity="0" loc="149" ncloc="149" packages="6" files="16" classes="16"/>
     <package name="lib">
       <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -23,49 +23,49 @@
       <metrics statements="40" coveredstatements="40" conditionals="6" coveredconditionals="5" methods="19" coveredmethods="19"/>
       <file name="data-helpers.js" path="/Users/home/alchemy/career/overripe-bananas/lib/helpers/data-helpers.js">
         <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="9" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="27" count="11" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="15" type="stmt"/>
-        <line num="32" count="15" type="stmt"/>
-        <line num="33" count="5" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="15" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="15" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="27" count="18" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="20" type="stmt"/>
+        <line num="32" count="20" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
       </file>
       <file name="seed.js" path="/Users/home/alchemy/career/overripe-bananas/lib/helpers/seed.js">
         <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="5" methods="10" coveredmethods="10"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="cond" truecount="5" falsecount="1"/>
-        <line num="11" count="18" type="stmt"/>
-        <line num="15" count="18" type="stmt"/>
-        <line num="24" count="18" type="stmt"/>
-        <line num="29" count="18" type="stmt"/>
-        <line num="31" count="36" type="stmt"/>
-        <line num="33" count="36" type="stmt"/>
-        <line num="36" count="18" type="stmt"/>
-        <line num="38" count="36" type="stmt"/>
-        <line num="40" count="36" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="5" falsecount="1"/>
+        <line num="11" count="30" type="stmt"/>
+        <line num="15" count="30" type="stmt"/>
+        <line num="24" count="30" type="stmt"/>
+        <line num="29" count="30" type="stmt"/>
+        <line num="31" count="60" type="stmt"/>
+        <line num="33" count="60" type="stmt"/>
+        <line num="36" count="15" type="stmt"/>
+        <line num="38" count="30" type="stmt"/>
+        <line num="40" count="30" type="stmt"/>
       </file>
     </package>
     <package name="lib.middleware">

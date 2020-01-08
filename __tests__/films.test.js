@@ -3,7 +3,7 @@ const { getFilm, getFilms, getStudio, getActor } = require('../lib/helpers/data-
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('app routes', () => {
+describe('film routes', () => {
 
   it('creates a film', async() => {  
     const myActor = await getActor();

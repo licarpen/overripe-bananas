@@ -1,35 +1,10 @@
-require('dotenv').config();
+const { getReviewer, getReviewers, getReview } = require('../lib/helpers/data-helpers');
 
 const request = require('supertest');
 const app = require('../lib/app');
-const connect = require('../lib/utils/connect');
-const mongoose = require('mongoose');
-const Reviewer = require('../lib/models/Reviewer');
-const Film = require('../lib/models/Film');
 const Review = require('../lib/models/Review');
-const Studio = require('../lib/models/Studio');
 
-describe('app routes', () => {
-  beforeAll(() => {
-    connect();
-  });
-
-  beforeEach(() => {
-    return mongoose.connection.dropDatabase();
-  });
-
-  let myReviewer;
-  let myFilm;
-  let myStudio;
-  let myReview;
-
-  beforeEach(async() => {
-    myReviewer = await Reviewer.create({ name: 'Reviewer1', company: 'Review Company' });
-  });
-
-  afterAll(() => {
-    return mongoose.connection.close();
-  });
+describe('reviewer routes', () => {
 
   it('creates a reviewer', async() => {
     return request(app)
@@ -49,60 +24,29 @@ describe('app routes', () => {
   });
 
   it('gets all reviewers', async() => {
+    const reviewers = await getReviewers();
     return request(app)
       .get('/api/v1/reviewers')
       .then(res => {
-        expect(res.body).toEqual([{
-          _id: expect.any(String),
-          id: expect.any(String),
-          __v: 0,
-          name: 'Reviewer1', 
-          company: 'Review Company'
-        }]);
+        reviewers.forEach(reviewer => {
+          expect(res.body).toContainEqual(reviewer);
+        });
       });
   });
+
   it('gets a reviewer by id', async() => {
-    myStudio = await Studio.create({
-      name: 'ABC Studios'
-    });
-    myFilm = await Film.create({
-      title: 'Go Bananas!',
-      studio: myStudio._id,
-      released: 1999,
-      cast: []
-    });
-    myReview = await Review.create({ 
-      rating: 2,
-      reviewer: myReviewer._id,
-      review: 'Don\'t make the mistake of slipping on this rotten banana peel.',
-      film: myFilm._id
-    });
+    const reviewer = await getReviewer();
     return request(app)
-      .get(`/api/v1/reviewers/${myReviewer._id}`)
+      .get(`/api/v1/reviewers/${reviewer._id}`)
       .then(res => {
-        expect(res.body).toEqual({
-          _id: myReviewer._id.toString(),
-          id: expect.any(String),
-          __v: 0,
-          name: myReviewer.name, 
-          company: myReviewer.company,
-          reviews: [{
-            _id: myReview._id.toString(),
-            rating: myReview.rating,
-            review: myReview.review,
-            film: {
-              _id: myFilm._id.toString(),
-              id: expect.any(String),
-              title: myFilm.title
-            }
-          }]
-        });
+        expect(res.body).toEqual({ ...reviewer, reviews: expect.any(Object) });
       });
   });
   
   it('updates a reviewer by id', async() => {
+    const reviewer = await getReviewer();
     return request(app)
-      .patch(`/api/v1/reviewers/${myReviewer._id}`)
+      .patch(`/api/v1/reviewers/${reviewer._id}`)
       .send({ name: 'Reviewer2' })
       .then(res => {
         expect(res.body).toEqual({
@@ -110,41 +54,31 @@ describe('app routes', () => {
           id: expect.any(String),
           __v: 0,
           name: 'Reviewer2', 
-          company: 'Review Company'
+          company: reviewer.company
         });
       });
   });
   it('deletes a reviewer by id when the reviewer has no reviews', async() => {
+    const reviewer = await getReviewer();
+    await Review.deleteMany({ reviewer: reviewer._id });
     return request(app)
-      .delete(`/api/v1/reviewers/${myReviewer._id}`)
+      .delete(`/api/v1/reviewers/${reviewer._id}`)
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           id: expect.any(String),
           __v: 0,
-          name: 'Reviewer1', 
-          company: 'Review Company'
+          name: reviewer.name, 
+          company: reviewer.company
         });
       });
   });
   it('does not delete a reviewer by id when the reviewer has reviews', async() => {
-    myStudio = await Studio.create({
-      name: 'ABC Studios'
-    });
-    myFilm = await Film.create({
-      title: 'Go Bananas!',
-      studio: myStudio._id,
-      released: 1999,
-      cast: []
-    });
-    myReview = await Review.create({ 
-      rating: 2,
-      reviewer: myReviewer._id,
-      review: 'Don\'t make the mistake of slipping on this rotten banana peel.',
-      film: myFilm._id
-    });
+    const review = await getReview();
+    const reviewer = await getReviewer({ _id: review.reviewer });
+
     return request(app)
-      .delete(`/api/v1/reviewers/${myReviewer._id}`)
+      .delete(`/api/v1/reviewers/${reviewer._id}`)
       .then(res => {
         expect(res.body).toEqual({ message: 'This reviewer has reviews and cannot be deleted', status: 500 });
       });
