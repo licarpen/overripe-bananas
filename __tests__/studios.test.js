@@ -73,7 +73,7 @@ describe('app routes', () => {
           address: { city: 'Nowhere' },
           films: [{
             id: expect.any(String),
-            _id: myFilm._id,
+            _id: myFilm._id.toString(),
             title: myFilm.title
           }]
         });
