@@ -54,6 +54,12 @@ describe('app routes', () => {
       });
   });
 
+  // myStudio._id is ObjectID
+  // myStudio.id is a virtual that is a string
+  // toJSON( { vitruals: true }) includes .id in response and myStudio.id can be used in route 
+  // use myStuio._id.toString() to convert to string
+
+
   it('gets a studio by id', async() => {
     const myStudio = await Studio.create({ name: 'ABC Studios', address: { city: 'Nowhere' } });
     const myFilm = await Film.create({ 
