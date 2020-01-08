@@ -91,22 +91,23 @@ describe('app routes', () => {
     return request(app)
       .get(`/api/v1/films/${myFilm._id}`)
       .then(res => {
-        expect(res.body).toEqual([{
+        expect(res.body).toEqual({
           _id: myFilm._id.toString(),
           id: expect.any(String),
           __v: 0,
           released: myFilm.released,
           reviews: [{ 
+            __v: 0,
             rating: myReview.rating,
             review: myReview.review,
-            film: myFilm._id,
-            id: expect.any(String),
-            _id: myReview._id.toString()
+            film: myFilm._id.toString(),
+            _id: myReview._id.toString(),
+            reviewer: myReviewer._id.toString()
           }],
           title: myFilm.title,
-          cast: [{ role: 'All Around Badass', actor: myActor._id, _id: expect.any(String) }],
+          cast: [{ role: 'All Around Badass', actor: myActor._id.toString(), _id: expect.any(String) }],
           studio: { name: myStudio.name, _id: myStudio._id.toString(), id: myStudio.id }
-        }]);
+        });
       });
   });
 });
