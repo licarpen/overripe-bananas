@@ -11,46 +11,10 @@ const Review = require('../lib/models/Review');
 const Reviewer = require('../lib/models/Reviewer');
 
 describe('app routes', () => {
-  beforeAll(() => {
-    connect();
-  });
+// before all, before each...
+// refactor variable names
 
-  beforeEach(() => {
-    return mongoose.connection.dropDatabase();
-  });
-
-  let myActor;
-  let myStudio;
-  let myFilm;
-  let myReviewer;
-  let myReview;
-
-  beforeEach(async() => {
-    myActor = await Actor.create({ name: 'Lady' });
-    myStudio = await Studio.create({ name: 'ABC Studios' });
-    myReviewer = await Reviewer.create({
-      name: 'Reviewer1',
-      company: 'Review Company'
-    });
-    myFilm = await Film.create({ 
-      title: 'Badass Lady',
-      studio: myStudio._id,
-      released: 1999,
-      cast: [{ role: 'All Around Badass', actor: myActor._id }] });
-    myReview = await Review.create({ 
-      rating: 2,
-      reviewer: myReviewer._id,
-      review: 'Don\'t make the mistake of slipping on this rotten banana peel.',
-      film: myFilm._id
-    });
-    
-  });
-
-  afterAll(() => {
-    return mongoose.connection.close();
-  });
-
-  it('creates an film', async() => {
+  it('creates a film', async() => {
     return request(app)
       .post('/api/v1/films')
       .send({
