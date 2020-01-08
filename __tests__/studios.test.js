@@ -56,6 +56,12 @@ describe('app routes', () => {
 
   it('gets a studio by id', async() => {
     const myStudio = await Studio.create({ name: 'ABC Studios', address: { city: 'Nowhere' } });
+    const myFilm = await Film.create({ 
+      title: 'Go Bananas!',
+      studio: myStudio._id,
+      released: 1999,
+      cast: []
+    });
     return request(app)
       .get(`/api/v1/studios/${myStudio.id}`)
       .then(res => {
@@ -65,7 +71,11 @@ describe('app routes', () => {
           name: myStudio.name,
           id: expect.any(String),
           address: { city: 'Nowhere' },
-          films: []
+          films: [{
+            id: expect.any(String),
+            _id: myFilm._id,
+            title: myFilm.title
+          }]
         });
       });
   });
