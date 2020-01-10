@@ -1,79 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1578603261176" clover="3.2.0">
-  <project timestamp="1578603261177" name="All files">
-    <metrics statements="180" coveredstatements="157" conditionals="19" coveredconditionals="13" methods="68" coveredmethods="61" elements="267" coveredelements="231" complexity="0" loc="180" ncloc="180" packages="6" files="17" classes="17"/>
+<coverage generated="1578617729614" clover="3.2.0">
+  <project timestamp="1578617729614" name="All files">
+    <metrics statements="210" coveredstatements="176" conditionals="21" coveredconditionals="13" methods="78" coveredmethods="67" elements="309" coveredelements="256" complexity="0" loc="210" ncloc="210" packages="6" files="19" classes="19"/>
     <package name="lib">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/home/alchemy/career/overripe-bananas/lib/app.js">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
       </file>
     </package>
     <package name="lib.helpers">
       <metrics statements="40" coveredstatements="40" conditionals="6" coveredconditionals="5" methods="19" coveredmethods="19"/>
       <file name="data-helpers.js" path="/Users/home/alchemy/career/overripe-bananas/lib/helpers/data-helpers.js">
         <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="18" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="18" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="19" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="19" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
         <line num="27" count="23" type="stmt"/>
-        <line num="29" count="5" type="stmt"/>
-        <line num="30" count="25" type="stmt"/>
-        <line num="32" count="25" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="30" count="30" type="stmt"/>
+        <line num="32" count="30" type="stmt"/>
         <line num="33" count="15" type="stmt"/>
         <line num="34" count="4" type="stmt"/>
-        <line num="38" count="5" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
       </file>
       <file name="seed.js" path="/Users/home/alchemy/career/overripe-bananas/lib/helpers/seed.js">
         <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="5" methods="10" coveredmethods="10"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="9" count="5" type="cond" truecount="5" falsecount="1"/>
-        <line num="11" count="36" type="stmt"/>
-        <line num="15" count="36" type="stmt"/>
-        <line num="24" count="36" type="stmt"/>
-        <line num="29" count="36" type="stmt"/>
-        <line num="31" count="72" type="stmt"/>
-        <line num="33" count="72" type="stmt"/>
-        <line num="36" count="18" type="stmt"/>
-        <line num="38" count="36" type="stmt"/>
-        <line num="40" count="36" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="5" falsecount="1"/>
+        <line num="11" count="38" type="stmt"/>
+        <line num="15" count="38" type="stmt"/>
+        <line num="24" count="38" type="stmt"/>
+        <line num="29" count="38" type="stmt"/>
+        <line num="31" count="76" type="stmt"/>
+        <line num="33" count="76" type="stmt"/>
+        <line num="36" count="19" type="stmt"/>
+        <line num="38" count="38" type="stmt"/>
+        <line num="40" count="38" type="stmt"/>
       </file>
     </package>
     <package name="lib.middleware">
-      <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="1"/>
+      <metrics statements="26" coveredstatements="12" conditionals="8" coveredconditionals="5" methods="6" coveredmethods="1"/>
+      <file name="ensure-auth.js" path="/Users/home/alchemy/career/overripe-bananas/lib/middleware/ensure-auth.js">
+        <metrics statements="14" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+      </file>
       <file name="error.js" path="/Users/home/alchemy/career/overripe-bananas/lib/middleware/error.js">
         <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
@@ -83,72 +102,72 @@
       </file>
       <file name="not-found.js" path="/Users/home/alchemy/career/overripe-bananas/lib/middleware/not-found.js">
         <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
       </file>
     </package>
     <package name="lib.models">
-      <metrics statements="55" coveredstatements="37" conditionals="6" coveredconditionals="2" methods="8" coveredmethods="3"/>
+      <metrics statements="55" coveredstatements="40" conditionals="6" coveredconditionals="2" methods="8" coveredmethods="6"/>
       <file name="Actor.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Actor.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
       </file>
       <file name="Film.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Film.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="35" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="42" count="6" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
       </file>
       <file name="Review.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Review.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
       </file>
       <file name="Reviewer.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Reviewer.js">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
         <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
       </file>
       <file name="Studio.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/Studio.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
       </file>
       <file name="User.js" path="/Users/home/alchemy/career/overripe-bananas/lib/models/User.js">
-        <metrics statements="27" coveredstatements="9" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <metrics statements="27" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
+        <line num="44" count="7" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="47" count="0" type="stmt"/>
@@ -160,18 +179,18 @@
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
+        <line num="61" count="7" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="67" count="7" type="stmt"/>
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="50" coveredstatements="50" conditionals="0" coveredconditionals="0" methods="35" coveredmethods="35"/>
+      <metrics statements="64" coveredstatements="60" conditionals="0" coveredconditionals="0" methods="41" coveredmethods="38"/>
       <file name="actors.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/actors.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -179,11 +198,28 @@
         <line num="19" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
+      <file name="auth.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/auth.js">
+        <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
       <file name="films.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/films.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -194,9 +230,9 @@
       </file>
       <file name="reviewers.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/reviewers.js">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
@@ -210,9 +246,9 @@
       </file>
       <file name="reviews.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/reviews.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -222,9 +258,9 @@
       </file>
       <file name="studios.js" path="/Users/home/alchemy/career/overripe-bananas/lib/routes/studios.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -237,17 +273,17 @@
       <metrics statements="12" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
       <file name="connect.js" path="/Users/home/alchemy/career/overripe-bananas/lib/utils/connect.js">
         <metrics statements="12" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="4" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
       </file>
     </package>
