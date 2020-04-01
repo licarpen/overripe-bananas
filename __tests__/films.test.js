@@ -11,19 +11,19 @@ describe('film routes', () => {
     return request(app)
       .post('/api/v1/films')
       .send({
-        title: 'Badass Lady',
+        title: 'Being Queen Bee',
         studio: myStudio._id,
         released: 1999,
-        cast: [{ role: 'All Around Badass', actor: myActor._id }]
+        cast: [{ role: 'worker bee', actor: myActor._id }]
       })
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           id: expect.any(String),
           __v: 0,
-          cast: [{ _id: expect.any(String), actor: myActor._id.toString(), role: 'All Around Badass' }],
+          cast: [{ _id: expect.any(String), actor: myActor._id.toString(), role: 'worker bee' }],
           released: 1999,
-          title: 'Badass Lady',
+          title: 'Being Queen Bee',
           studio: myStudio._id.toString()
         });
       });
