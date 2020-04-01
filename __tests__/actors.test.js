@@ -8,13 +8,13 @@ describe('actor routes', () => {
     return request(app)
       .post('/api/v1/actors')
       .send({
-        name: 'Lady of the Night'
+        name: 'Queen Bee'
       })
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           __v: 0,
-          name: 'Lady of the Night',
+          name: 'Queen Bee',
           id: expect.any(String)
         });
       });
